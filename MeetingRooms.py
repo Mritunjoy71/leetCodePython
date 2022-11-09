@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+    def meetingRoom(self, intervals: List[List[int]]) -> int:
         intervals.sort(key=lambda i: i[0])
         lastEnd = intervals[0][1]
         for start, end in intervals[1:]:
@@ -18,5 +18,5 @@ class Solution:
 if __name__ == '__main__':
     intervals = [[1, 2], [1, 2], [1, 2]]
     solution = Solution()
-    result = solution.eraseOverlapIntervals(intervals)
+    result = solution.meetingRoom(intervals)
     print("result: ", result)
